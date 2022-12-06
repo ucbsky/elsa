@@ -1,0 +1,32 @@
+[package]
+name = "crypto-primitives"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# basics
+block = { path = "../block" }
+serialize = { path = "../serialize" }
+safe_arch = { version = "0.6", features = ["bytemuck"] }
+
+# for crypto
+num-traits = "0.2.14"
+rand = "^0.8.4"
+rand_chacha = "0.3.1"
+num-integer = "0.1.44"
+bytemuck = { version = "1.7.3", features = ["min_const_generics"] }
+
+sha2 = "0.10.2"
+
+tracing = "0.1"
+bytes = { version = "^1.1.0", features = ["serde"] }
+itertools = "0.10"
+
+# cpu-bound parallelism
+rayon = "1.5.3"
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[features]
+optional_tests = []

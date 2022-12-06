@@ -1,0 +1,7 @@
+[build]
+# This can cause weirdness if they don't match!
+rustflags = ["-Ctarget-cpu=native"]
+rustdocflags = ["-Ctarget-cpu=native"]
+
+[env]
+RUSTFLAGS='-c target-cpu=native'

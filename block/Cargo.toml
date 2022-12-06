@@ -1,0 +1,22 @@
+[package]
+name = "block"
+description = "A crate for GF(2) arithmetic"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+
+serialize = { path = "../serialize" }
+
+safe_arch = { version = "0.6", features = ["bytemuck"] }
+bytemuck = { version = "1.7.3", features = ["min_const_generics"] }
+bytemuck_derive = "1"
+rand = { version = "0.8" }
+derive_more = "0.99.17"
+bytes = { version = "^1.1.0", features = ["serde"] }
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[dev-dependencies]
+
+[features]
+optional_tests = []

@@ -1,0 +1,49 @@
+[workspace]
+
+members = [
+    "bridge",
+    "bin-utils",
+    "my-workspace-hack",
+    "serialize",
+    "crypto-primitives",
+    #"bindings",
+    "block",
+    #"client-baseline",
+    #"client-baseline-mp",
+    "client-po2",
+    "client-l2",
+    "client-mp",
+    "client-mp-po2",
+    #"server-baseline",
+    #"server-baseline-mp",
+    "server-po2",
+    "server-l2",
+    "server-mp",
+    "server-mp-po2",
+]
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+incremental = true
+panic = 'abort'
+debug = true
+
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = "thin"
+incremental = true
+debug-assertions = false
+
+[profile.dev]
+opt-level = 0
+panic = 'abort'
+
+[profile.test]
+opt-level = 3
+lto = "thin"
+incremental = true
+debug-assertions = true
+debug = true

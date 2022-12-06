@@ -1,0 +1,27 @@
+[package]
+name = "server-mp-po2"
+description = "Malicious Privacy Server for Eiffel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crypto-primitives = { path = "../crypto-primitives" }
+bridge = { path = "../bridge", features = ["print-trace"] }
+bin-utils = { path = "../bin-utils", features = ["server"]}
+serialize = { path = "../serialize" }
+block = { path = "../block" }
+tokio = { version = "^1.16", features = ["full"] }
+rayon = "1.5.3"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+itertools = "0.10"
+
+rand = "^0.8.4"
+
+sha2 = "0.10.2"
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[features]
+no-comm = [] # no communication for debugging

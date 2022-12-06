@@ -1,0 +1,18 @@
+[package]
+name = "bindings"
+version = "0.1.0" 
+description = "C++ bindings for eiffel. Includes {TODO}"
+edition = "2018"
+
+[build-dependencies]
+bindgen = {version = "0.59.1"}
+cmake = {version = "0.1"}
+cc = "1.0"
+
+[dependencies]
+tokio = {version = "1.12.0", features= ["full"]}
+rand = "^0.8.4"
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[features]
+optional_tests = []

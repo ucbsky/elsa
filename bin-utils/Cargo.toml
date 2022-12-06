@@ -1,0 +1,15 @@
+[package]
+name = "bin-utils"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "3.0"
+tracing-core = "0.1"
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[features]
+client = []
+server = []

@@ -1,0 +1,14 @@
+/target/
+**/target
+.history
+.idea
+build
+.cache
+/bindings/c++/CMakeFiles
+/bindings/c++/Makefile
+/bindings/c++/cmake_install.cmake
+**/data
+server_addr.json
+.vscode/
+/bindings/c++/cmake-build-debug/
+

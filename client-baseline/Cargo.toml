@@ -1,0 +1,26 @@
+[package]
+name = "client-baseline"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crypto-primitives = { path = "../crypto-primitives" }
+bin-utils = { path = "../bin-utils", features = ["client"]}
+bridge = { path = "../bridge", features = ["print-trace"] }
+serialize = { path = "../serialize" }
+tokio = { version = "1.16", features = ["full"] }
+rayon = "1.5.1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+rand = "^0.8.4"
+my-workspace-hack = { version = "0.1", path = "../my-workspace-hack" }
+
+[[bench]]
+name = "msg_gen"
+harness = false
+
+[dev-dependencies]
+criterion = "0.3.4"

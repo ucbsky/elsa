@@ -1,0 +1,22 @@
+[address]
+client = "localhost"
+alice = "localhost"
+bob = "localhost"
+
+[parameters]
+gsize = 1000
+num_clients = 10
+input_size = 32
+
+[client]
+bin = "client-mp"
+build_flags = ""
+run_flags = "" 
+
+[server]
+bin = "server-mp"
+build_flags = ""
+run_flags = ""
+num_mpc_sockets = 16
+flamegraph_alice = false
+flamegraph_bob = false
